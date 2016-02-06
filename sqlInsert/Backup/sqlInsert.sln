@@ -1,0 +1,56 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shareddlls", "shareddlls", "{D77C8375-D26A-4BC2-8960-1EB8D6E83209}"
+	ProjectSection(SolutionItems) = preProject
+		shareddlls\log4net.dll = shareddlls\log4net.dll
+		shareddlls\WeifenLuo.WinFormsUI.Docking.dll = shareddlls\WeifenLuo.WinFormsUI.Docking.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLObjects", "sqlObjects\SQLObjects.csproj", "{AE84946B-4CA1-48D7-BBB5-84C6616AFCB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sqlInsert", "sqlInsert\sqlInsert.csproj", "{02D56214-3436-4F45-AFFD-D5118F107C9C}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SQLInserter", "SetupSQLInserter\SetupSQLInserter.vdproj", "{0F8E49B0-2363-435C-8D6D-DAF781CE0086}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DifferenceEngine", "DifferenceEngine\DifferenceEngine.csproj", "{8AE4897A-EA74-49B1-BA55-D892C27AF9C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE84946B-4CA1-48D7-BBB5-84C6616AFCB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE84946B-4CA1-48D7-BBB5-84C6616AFCB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE84946B-4CA1-48D7-BBB5-84C6616AFCB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE84946B-4CA1-48D7-BBB5-84C6616AFCB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02D56214-3436-4F45-AFFD-D5118F107C9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02D56214-3436-4F45-AFFD-D5118F107C9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02D56214-3436-4F45-AFFD-D5118F107C9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02D56214-3436-4F45-AFFD-D5118F107C9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F8E49B0-2363-435C-8D6D-DAF781CE0086}.Debug|Any CPU.ActiveCfg = Debug
+		{0F8E49B0-2363-435C-8D6D-DAF781CE0086}.Release|Any CPU.ActiveCfg = Release
+		{8AE4897A-EA74-49B1-BA55-D892C27AF9C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AE4897A-EA74-49B1-BA55-D892C27AF9C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AE4897A-EA74-49B1-BA55-D892C27AF9C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AE4897A-EA74-49B1-BA55-D892C27AF9C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs01.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = sqlInsert\\sqlInsert.csproj
+		SccProjectName1 = sqlInsert
+		SccLocalPath1 = sqlInsert
+		SccProjectUniqueName2 = sqlObjects\\SQLObjects.csproj
+		SccProjectName2 = sqlObjects
+		SccLocalPath2 = sqlObjects
+		SccProjectUniqueName3 = SetupSQLInserter\\SetupSQLInserter.vdproj
+		SccProjectName3 = SetupSQLInserter
+		SccLocalPath3 = SetupSQLInserter
+	EndGlobalSection
+EndGlobal

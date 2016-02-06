@@ -1,0 +1,5 @@
+C:\Projekte\SqlInserter\sqlInsert\DifferenceEngine\bin\Debug\DifferenceEngine.dll
+C:\Projekte\SqlInserter\sqlInsert\DifferenceEngine\bin\Debug\DifferenceEngine.pdb
+C:\Projekte\SqlInserter\sqlInsert\DifferenceEngine\obj\Debug\DifferenceEngine.csprojResolveAssemblyReference.cache
+C:\Projekte\SqlInserter\sqlInsert\DifferenceEngine\obj\Debug\DifferenceEngine.dll
+C:\Projekte\SqlInserter\sqlInsert\DifferenceEngine\obj\Debug\DifferenceEngine.pdb

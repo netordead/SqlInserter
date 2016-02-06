@@ -1,0 +1,8 @@
+C:\Projekte\SqlInserter\sqlInsert\sqlObjects\bin\Debug\SQLObjects.dll
+C:\Projekte\SqlInserter\sqlInsert\sqlObjects\bin\Debug\SQLObjects.pdb
+C:\Projekte\SqlInserter\sqlInsert\sqlObjects\bin\Debug\DifferenceEngine.dll
+C:\Projekte\SqlInserter\sqlInsert\sqlObjects\bin\Debug\log4net.dll
+C:\Projekte\SqlInserter\sqlInsert\sqlObjects\bin\Debug\DifferenceEngine.pdb
+C:\Projekte\SqlInserter\sqlInsert\sqlObjects\obj\Debug\SQLObjects.csprojResolveAssemblyReference.cache
+C:\Projekte\SqlInserter\sqlInsert\sqlObjects\obj\Debug\SQLObjects.dll
+C:\Projekte\SqlInserter\sqlInsert\sqlObjects\obj\Debug\SQLObjects.pdb
