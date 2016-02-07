@@ -11,6 +11,10 @@ using log4net;
 using Microsoft.SqlServer.Server;
 using Microsoft.SqlServer.Management.Smo;
 using Microsoft.SqlServer.Management.Common;
+using System.IO;
+using System.Xml;
+using System.Collections.Generic;
+using System.Data.SqlClient;
 
 namespace SQLInsert
 {
@@ -128,7 +132,8 @@ namespace SQLInsert
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Resources.ResourceManager resources = new System.Resources.ResourceManager(typeof(TableForm));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TableForm));
+			System.Windows.Forms.Button btnFillDependencies;
 			this.lblCol = new System.Windows.Forms.Label();
 			this.lblTable = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
@@ -146,24 +151,20 @@ namespace SQLInsert
 			this.grpTable = new System.Windows.Forms.GroupBox();
 			this.btnOrder = new System.Windows.Forms.Button();
 			this.grpFilter = new System.Windows.Forms.GroupBox();
+			btnFillDependencies = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.msgPanel)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtgTables)).BeginInit();
 			this.grpTable.SuspendLayout();
 			this.grpFilter.SuspendLayout();
 			this.SuspendLayout();
 			// 
-			// testLabel
-			// 
-			this.testLabel.Name = "testLabel";
-			// 
 			// msgPanel
 			// 
-			this.msgPanel.Width = 1016;
+			this.msgPanel.Width = 1015;
 			// 
 			// statBar
 			// 
 			this.statBar.Location = new System.Drawing.Point(0, 622);
-			this.statBar.Name = "statBar";
 			this.statBar.Size = new System.Drawing.Size(1032, 22);
 			// 
 			// lblCol
@@ -204,7 +205,6 @@ namespace SQLInsert
 			this.txtTop.Name = "txtTop";
 			this.txtTop.Size = new System.Drawing.Size(60, 20);
 			this.txtTop.TabIndex = 44;
-			this.txtTop.Text = "";
 			this.txtTop.TextChanged += new System.EventHandler(this.txtTop_TextChanged);
 			// 
 			// txtFilter
@@ -215,7 +215,6 @@ namespace SQLInsert
 			this.txtFilter.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.txtFilter.Size = new System.Drawing.Size(760, 56);
 			this.txtFilter.TabIndex = 43;
-			this.txtFilter.Text = "";
 			this.txtFilter.TextChanged += new System.EventHandler(this.txtFilter_TextChanged);
 			// 
 			// dtgTables
@@ -228,7 +227,7 @@ namespace SQLInsert
 			this.dtgTables.Size = new System.Drawing.Size(208, 288);
 			this.dtgTables.TabIndex = 39;
 			this.dtgTables.TableStyles.AddRange(new System.Windows.Forms.DataGridTableStyle[] {
-																								  this.dataGridTableStyle1});
+            this.dataGridTableStyle1});
 			this.dtgTables.ChangedOrderEvent += new SQLInsert.MatGrid.ChangedOrderHandler(this.ChangeOrder);
 			this.dtgTables.MouseUp += new System.Windows.Forms.MouseEventHandler(this.dtgTables_MouseUp);
 			// 
@@ -236,8 +235,8 @@ namespace SQLInsert
 			// 
 			this.dataGridTableStyle1.DataGrid = this.dtgTables;
 			this.dataGridTableStyle1.GridColumnStyles.AddRange(new System.Windows.Forms.DataGridColumnStyle[] {
-																												  this.TableName,
-																												  this.Script});
+            this.TableName,
+            this.Script});
 			this.dataGridTableStyle1.HeaderForeColor = System.Drawing.SystemColors.ControlText;
 			this.dataGridTableStyle1.MappingName = "Tables";
 			this.dataGridTableStyle1.PreferredColumnWidth = 300;
@@ -253,11 +252,8 @@ namespace SQLInsert
 			// 
 			// Script
 			// 
-			this.Script.FalseValue = false;
 			this.Script.HeaderText = "Script ? ";
 			this.Script.MappingName = "Script";
-			this.Script.NullValue = ((object)(resources.GetObject("Script.NullValue")));
-			this.Script.TrueValue = true;
 			this.Script.Width = 50;
 			// 
 			// chkCols
@@ -335,22 +331,31 @@ namespace SQLInsert
 			this.grpFilter.TabStop = false;
 			this.grpFilter.Text = "Optional: Limit scripted Data to Filter";
 			// 
+			// btnFillDependencies
+			// 
+			btnFillDependencies.Location = new System.Drawing.Point(178, 8);
+			btnFillDependencies.Name = "btnFillDependencies";
+			btnFillDependencies.Size = new System.Drawing.Size(156, 23);
+			btnFillDependencies.TabIndex = 68;
+			btnFillDependencies.Text = "Include Dependencies";
+			btnFillDependencies.Click += new System.EventHandler(this.btnFillDependencies_Click);
+			// 
 			// TableForm
 			// 
 			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
 			this.ClientSize = new System.Drawing.Size(1032, 646);
+			this.Controls.Add(btnFillDependencies);
 			this.Controls.Add(this.grpFilter);
 			this.Controls.Add(this.grpTable);
 			this.Controls.Add(this.btnCreate);
 			this.DockableAreas = ((WeifenLuo.WinFormsUI.DockAreas)(((((WeifenLuo.WinFormsUI.DockAreas.Float | WeifenLuo.WinFormsUI.DockAreas.DockLeft) 
-				| WeifenLuo.WinFormsUI.DockAreas.DockRight) 
-				| WeifenLuo.WinFormsUI.DockAreas.DockTop) 
-				| WeifenLuo.WinFormsUI.DockAreas.DockBottom)));
-			this.DockPadding.Bottom = 2;
-			this.DockPadding.Top = 2;
+            | WeifenLuo.WinFormsUI.DockAreas.DockRight) 
+            | WeifenLuo.WinFormsUI.DockAreas.DockTop) 
+            | WeifenLuo.WinFormsUI.DockAreas.DockBottom)));
 			this.HideOnClose = true;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "TableForm";
+			this.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
 			this.ShowHint = WeifenLuo.WinFormsUI.DockState.DockTopAutoHide;
 			this.Text = "Table Form";
 			this.ToolTipText = "Choose which Tables and Columns to script";
@@ -359,10 +364,12 @@ namespace SQLInsert
 			this.Controls.SetChildIndex(this.grpTable, 0);
 			this.Controls.SetChildIndex(this.grpFilter, 0);
 			this.Controls.SetChildIndex(this.statBar, 0);
+			this.Controls.SetChildIndex(btnFillDependencies, 0);
 			((System.ComponentModel.ISupportInitialize)(this.msgPanel)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtgTables)).EndInit();
 			this.grpTable.ResumeLayout(false);
 			this.grpFilter.ResumeLayout(false);
+			this.grpFilter.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -626,5 +633,103 @@ namespace SQLInsert
 			this.SetUIFromSettings(Global.RefreshMode.DataBase);
 		}
 
+		private bool  LoadXMLNodeAndChildren(XmlNode tableNode, bool isRoot, List<string> foreignKeys)
+		{
+			try
+			{
+			
+				string output = "";
+				foreach(XmlAttribute attr in tableNode.Attributes)
+				{;
+					output += attr.Name + ":" +  attr.Value + "; ";
+                }
+
+				log.Debug("Loaded + " + output );
+
+				string tableName = tableNode.Attributes["name"].Value;
+				string pk = tableNode.Attributes["PrimaryKey"].Value;
+
+				Global.DBSetting.GetTblSetting(tableName, true).Script = true;
+
+
+				string fk = "";
+				if(!isRoot)
+				{
+					fk = tableNode.Attributes["ForeignKey"].Value;
+				}
+
+
+
+				List<string> fkForChild = new List<string>();
+				string filter = "";
+				if (foreignKeys.Count > 0 &&  !string.IsNullOrEmpty(fk))
+				{
+					string filterNoWhereStatement = string.Format("[{0}] IN ( {1} )", fk, string.Join(", ", foreignKeys.ToArray()));
+
+					filter = " WHERE " + filterNoWhereStatement;
+
+					Global.DBSetting.GetTblSetting(tableName, true).Filter = filterNoWhereStatement;
+				}
+
+				//Root table filter 
+				if(isRoot && !string.IsNullOrEmpty(Global.DBSetting.GetTblSetting(tableName, true).Filter))
+				{
+					filter = " WHERE " + Global.DBSetting.GetTblSetting(tableName, true).Filter;
+                }
+
+				if (tableNode.HasChildNodes)
+				{
+					string sql = string.Format("Select [{0}] FROM [{1}] " + filter, pk, tableName);
+					DataTable dt = Global.Serv1.Databases[Global.SelectedDB].ExecuteWithResults(sql).Tables[0];
+					foreach(DataRow dr in dt.Rows)
+					{
+						int val = (int)dr[pk];
+						fkForChild.Add(val.ToString());
+                    }
+				}
+
+
+                if (tableNode.HasChildNodes)
+				{
+					foreach(XmlNode dependentTable in tableNode.ChildNodes)
+					{
+						if( !LoadXMLNodeAndChildren(dependentTable,false, fkForChild)) return false;
+                    }
+				}
+
+				return true;
+			}
+			catch (System.Exception ex)
+			{
+				return false;
+			}
+		}
+
+		private void btnFillDependencies_Click(object sender, EventArgs e)
+		{
+			string filename = Application.StartupPath + @"/dependencies.xml";
+			if(!File.Exists(filename))
+			{
+				this.statBar.Text = "Please check that dependencies.xml exists in application directory";
+				return;
+			}
+			else
+			{
+				XmlDocument doc = new XmlDocument();
+				try
+				{
+					doc.Load(filename);
+				}
+				catch
+				{
+					this.statBar.Text = "dependencies.xml is no a valid xml document";
+					return;
+				}
+
+				bool result = LoadXMLNodeAndChildren(doc.DocumentElement,true ,new List<string>());
+				if(result )this.SetUIFromSettings(Global.RefreshMode.DataBase);
+
+			}
+		}
 	}
 }

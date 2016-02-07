@@ -2,6 +2,123 @@
 <ApplicationSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ServerSettings>
     <ServerSetting>
+      <Name>.</Name>
+      <DBSettings>
+        <DBSetting>
+          <IdentityInsert>false</IdentityInsert>
+          <ScriptToFile>false</ScriptToFile>
+          <DeleteBeforeInsert>false</DeleteBeforeInsert>
+          <TableSettingsSer>
+            <TableSetting>
+              <ColumnSettings />
+              <Filter />
+              <Top>-1</Top>
+              <Script>false</Script>
+              <Name>__MigrationHistory</Name>
+              <OrderID>1</OrderID>
+            </TableSetting>
+            <TableSetting>
+              <ColumnSettings>
+                <ColumnSetting>
+                  <Script>true</Script>
+                  <Name>LastName</Name>
+                </ColumnSetting>
+                <ColumnSetting>
+                  <Script>true</Script>
+                  <Name>FirstName</Name>
+                </ColumnSetting>
+                <ColumnSetting>
+                  <Script>true</Script>
+                  <Name>ID</Name>
+                </ColumnSetting>
+                <ColumnSetting>
+                  <Script>true</Script>
+                  <Name>Company_ID</Name>
+                </ColumnSetting>
+              </ColumnSettings>
+              <Filter>[Company_ID] IN ( 2 )</Filter>
+              <Top>-1</Top>
+              <Script>true</Script>
+              <Name>Person</Name>
+              <OrderID>5</OrderID>
+            </TableSetting>
+            <TableSetting>
+              <ColumnSettings>
+                <ColumnSetting>
+                  <Script>true</Script>
+                  <Name>BranchName</Name>
+                </ColumnSetting>
+                <ColumnSetting>
+                  <Script>true</Script>
+                  <Name>ID</Name>
+                </ColumnSetting>
+                <ColumnSetting>
+                  <Script>true</Script>
+                  <Name>Company_ID</Name>
+                </ColumnSetting>
+              </ColumnSettings>
+              <Filter>[Company_ID] IN ( 2 )</Filter>
+              <Top>-1</Top>
+              <Script>true</Script>
+              <Name>Branch</Name>
+              <OrderID>3</OrderID>
+            </TableSetting>
+            <TableSetting>
+              <ColumnSettings>
+                <ColumnSetting>
+                  <Script>true</Script>
+                  <Name>City</Name>
+                </ColumnSetting>
+                <ColumnSetting>
+                  <Script>true</Script>
+                  <Name>Street</Name>
+                </ColumnSetting>
+                <ColumnSetting>
+                  <Script>true</Script>
+                  <Name>Zip</Name>
+                </ColumnSetting>
+                <ColumnSetting>
+                  <Script>true</Script>
+                  <Name>ID</Name>
+                </ColumnSetting>
+                <ColumnSetting>
+                  <Script>true</Script>
+                  <Name>Person_ID</Name>
+                </ColumnSetting>
+                <ColumnSetting>
+                  <Script>true</Script>
+                  <Name>Country</Name>
+                </ColumnSetting>
+              </ColumnSettings>
+              <Filter>[Person_ID] IN ( 3, 4 )</Filter>
+              <Top>-1</Top>
+              <Script>true</Script>
+              <Name>Address</Name>
+              <OrderID>2</OrderID>
+            </TableSetting>
+            <TableSetting>
+              <ColumnSettings>
+                <ColumnSetting>
+                  <Script>true</Script>
+                  <Name>ID</Name>
+                </ColumnSetting>
+                <ColumnSetting>
+                  <Script>true</Script>
+                  <Name>CompanyName</Name>
+                </ColumnSetting>
+              </ColumnSettings>
+              <Filter>[ID] = 2</Filter>
+              <Top>-1</Top>
+              <Script>true</Script>
+              <Name>Company</Name>
+              <OrderID>4</OrderID>
+            </TableSetting>
+          </TableSettingsSer>
+          <Name>contacts</Name>
+        </DBSetting>
+      </DBSettings>
+    </ServerSetting>
+    <ServerSetting>
       <Name>someserver</Name>
       <DBSettings />
     </ServerSetting>

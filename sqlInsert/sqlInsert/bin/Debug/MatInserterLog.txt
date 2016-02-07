@@ -1,0 +1,130 @@
+2016-02-07 21:43:17,830 [988] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 21:43:17,865 [988] DEBUG SQLInsert.TableForm Hit first Column
+2016-02-07 21:43:17,867 [988] DEBUG SQLInsert.TableForm Changed Table:__MigrationHistory script: False
+2016-02-07 21:43:17,868 [988] DEBUG SQLInsert.TableForm SelectedTable: __MigrationHistory
+2016-02-07 21:43:24,144 [988] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 21:43:24,145 [988] DEBUG SQLInsert.TableForm SelectedTable: Company
+2016-02-07 21:43:33,162 [988] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 21:43:33,162 [988] DEBUG SQLInsert.TableForm SelectedTable: Branch
+2016-02-07 21:43:33,965 [988] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 21:43:33,965 [988] DEBUG SQLInsert.TableForm SelectedTable: __MigrationHistory
+2016-02-07 21:52:53,920 [8920] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 21:52:53,959 [8920] DEBUG SQLInsert.TableForm SelectedTable: Address
+2016-02-07 21:56:05,515 [2480] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 21:56:05,550 [2480] DEBUG SQLInsert.TableForm SelectedTable: Address
+2016-02-07 22:06:31,202 [7828] DEBUG SQLInsert.TableForm Loaded + System.Xml.XmlAttributeCollection
+2016-02-07 22:19:31,326 [7864] DEBUG SQLInsert.TableForm Loaded + name:Company; PrimaryKey:ID; 
+2016-02-07 22:19:31,367 [7864] DEBUG SQLInsert.TableForm Loaded + name:Person; PrimaryKey:ID; ForeignKey:Company_ID; 
+2016-02-07 22:19:31,367 [7864] DEBUG SQLInsert.TableForm Loaded + name:Address; PrimaryKey:ID; ForeignKey:Person_ID; 
+2016-02-07 22:19:31,367 [7864] DEBUG SQLInsert.TableForm Loaded + name:Branch; PrimaryKey:ID; ForeignKey:Company_ID; 
+2016-02-07 22:19:42,742 [7864] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 22:19:42,742 [7864] DEBUG SQLInsert.TableForm SelectedTable: Address
+2016-02-07 22:19:46,930 [7864] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 22:19:46,930 [7864] DEBUG SQLInsert.TableForm SelectedTable: Branch
+2016-02-07 22:19:48,005 [7864] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 22:19:48,005 [7864] DEBUG SQLInsert.TableForm SelectedTable: Address
+2016-02-07 22:19:49,016 [7864] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 22:19:49,016 [7864] DEBUG SQLInsert.TableForm SelectedTable: Branch
+2016-02-07 22:19:50,201 [7864] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 22:19:50,202 [7864] DEBUG SQLInsert.TableForm SelectedTable: Company
+2016-02-07 22:19:51,274 [7864] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 22:19:51,274 [7864] DEBUG SQLInsert.TableForm SelectedTable: Branch
+2016-02-07 22:19:52,398 [7864] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 22:19:52,398 [7864] DEBUG SQLInsert.TableForm SelectedTable: Company
+2016-02-07 22:19:53,533 [7864] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 22:19:53,533 [7864] DEBUG SQLInsert.TableForm SelectedTable: Person
+2016-02-07 22:19:54,644 [7864] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 22:19:54,645 [7864] DEBUG SQLInsert.TableForm SelectedTable: Branch
+2016-02-07 22:19:55,840 [7864] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 22:19:55,841 [7864] DEBUG SQLInsert.TableForm SelectedTable: Address
+2016-02-07 22:19:56,940 [7864] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 22:19:56,940 [7864] DEBUG SQLInsert.TableForm SelectedTable: Branch
+2016-02-07 22:19:57,841 [7864] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 22:19:57,841 [7864] DEBUG SQLInsert.TableForm SelectedTable: Address
+2016-02-07 22:20:07,370 [7864] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 22:20:07,370 [7864] DEBUG SQLInsert.TableForm SelectedTable: __MigrationHistory
+2016-02-07 22:20:08,517 [7864] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 22:20:08,517 [7864] DEBUG SQLInsert.TableForm SelectedTable: Address
+2016-02-07 22:53:08,239 [6972] DEBUG SQLInsert.TableForm Loaded + name:Company; PrimaryKey:ID; 
+2016-02-07 22:55:36,761 [7976] DEBUG SQLInsert.TableForm Loaded + name:Company; PrimaryKey:ID; 
+2016-02-07 22:56:30,162 [7976] DEBUG SQLInsert.TableForm Loaded + name:Person; PrimaryKey:ID; ForeignKey:Company_ID; 
+2016-02-07 22:57:43,341 [4888] DEBUG SQLInsert.TableForm Loaded + name:Company; PrimaryKey:ID; 
+2016-02-07 22:57:43,410 [4888] DEBUG SQLInsert.TableForm Loaded + name:Person; PrimaryKey:ID; ForeignKey:Company_ID; 
+2016-02-07 22:57:43,412 [4888] DEBUG SQLInsert.TableForm Loaded + name:Address; PrimaryKey:ID; ForeignKey:Person_ID; 
+2016-02-07 22:57:43,412 [4888] DEBUG SQLInsert.TableForm Loaded + name:Branch; PrimaryKey:ID; ForeignKey:Company_ID; 
+2016-02-07 22:58:31,705 [4888] DEBUG SQLInsert.TableForm Loaded + name:Company; PrimaryKey:ID; 
+2016-02-07 22:59:32,036 [8420] DEBUG SQLInsert.TableForm Loaded + name:Company; PrimaryKey:ID; 
+2016-02-07 23:00:12,688 [8420] DEBUG SQLInsert.TableForm Loaded + name:Person; PrimaryKey:ID; ForeignKey:Company_ID; 
+2016-02-07 23:02:29,317 [8184] DEBUG SQLInsert.TableForm Loaded + name:Company; PrimaryKey:ID; 
+2016-02-07 23:02:40,752 [8184] DEBUG SQLInsert.TableForm Loaded + name:Person; PrimaryKey:ID; ForeignKey:Company_ID; 
+2016-02-07 23:04:07,310 [8184] DEBUG SQLInsert.TableForm Loaded + name:Address; PrimaryKey:ID; ForeignKey:Person_ID; 
+2016-02-07 23:13:41,737 [6576] DEBUG SQLInsert.TableForm Loaded + name:Company; PrimaryKey:ID; 
+2016-02-07 23:13:49,545 [6576] DEBUG SQLInsert.TableForm Loaded + name:Person; PrimaryKey:ID; ForeignKey:Company_ID; 
+2016-02-07 23:13:49,547 [6576] DEBUG SQLInsert.TableForm Loaded + name:Address; PrimaryKey:ID; ForeignKey:Person_ID; 
+2016-02-07 23:13:49,547 [6576] DEBUG SQLInsert.TableForm Loaded + name:Branch; PrimaryKey:ID; ForeignKey:Company_ID; 
+2016-02-07 23:13:56,080 [6576] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 23:13:56,080 [6576] DEBUG SQLInsert.TableForm SelectedTable: Address
+2016-02-07 23:13:58,760 [6576] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 23:13:58,760 [6576] DEBUG SQLInsert.TableForm SelectedTable: Branch
+2016-02-07 23:14:01,030 [6576] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 23:14:01,030 [6576] DEBUG SQLInsert.TableForm SelectedTable: Company
+2016-02-07 23:14:02,548 [6576] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 23:14:02,549 [6576] DEBUG SQLInsert.TableForm SelectedTable: Person
+2016-02-07 23:14:04,017 [6576] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 23:14:04,017 [6576] DEBUG SQLInsert.TableForm SelectedTable: Company
+2016-02-07 23:14:10,237 [6576] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 23:14:10,237 [6576] DEBUG SQLInsert.TableForm SelectedTable: Address
+2016-02-07 23:14:11,248 [6576] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 23:14:11,248 [6576] DEBUG SQLInsert.TableForm SelectedTable: Company
+2016-02-07 23:14:18,690 [2256] DEBUG SQLInsert.DocForm Scripting table: Address
+2016-02-07 23:14:18,950 [2256] DEBUG SQLInsert.DocForm SELECT [ID] ,[Street] ,[City] ,[Zip] ,[Country] ,[Person_ID]  FROM [dbo].[Address]  WHERE 1=1  AND ( [Person_ID] IN ( 1, 2, 3, 4 ) ) 
+2016-02-07 23:14:18,962 [2256] DEBUG SQLInsert.DocForm Scripting table: Branch
+2016-02-07 23:14:18,985 [2256] DEBUG SQLInsert.DocForm SELECT [ID] ,[BranchName] ,[Company_ID]  FROM [dbo].[Branch]  WHERE 1=1  AND ( [Company_ID] IN ( 1, 2, 3 ) ) 
+2016-02-07 23:14:18,995 [2256] DEBUG SQLInsert.DocForm Scripting table: Company
+2016-02-07 23:14:19,008 [2256] DEBUG SQLInsert.DocForm SELECT [ID] ,[CompanyName]  FROM [dbo].[Company]  WHERE 1=1 
+2016-02-07 23:14:19,013 [2256] DEBUG SQLInsert.DocForm Scripting table: Person
+2016-02-07 23:14:19,041 [2256] DEBUG SQLInsert.DocForm SELECT [ID] ,[FirstName] ,[LastName] ,[Company_ID]  FROM [dbo].[Person]  WHERE 1=1  AND ( [Company_ID] IN ( 1, 2, 3 ) ) 
+2016-02-07 23:21:25,674 [5248] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 23:21:25,716 [5248] DEBUG SQLInsert.TableForm SelectedTable: Company
+2016-02-07 23:21:45,190 [5248] DEBUG SQLInsert.TableForm Loaded + name:Company; PrimaryKey:ID; 
+2016-02-07 23:21:45,219 [5248] DEBUG SQLInsert.TableForm Loaded + name:Person; PrimaryKey:ID; ForeignKey:Company_ID; 
+2016-02-07 23:21:45,222 [5248] DEBUG SQLInsert.TableForm Loaded + name:Address; PrimaryKey:ID; ForeignKey:Person_ID; 
+2016-02-07 23:21:45,222 [5248] DEBUG SQLInsert.TableForm Loaded + name:Branch; PrimaryKey:ID; ForeignKey:Company_ID; 
+2016-02-07 23:21:50,434 [5248] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 23:21:50,434 [5248] DEBUG SQLInsert.TableForm SelectedTable: Company
+2016-02-07 23:21:52,297 [5248] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 23:21:52,297 [5248] DEBUG SQLInsert.TableForm SelectedTable: Branch
+2016-02-07 23:21:55,135 [5248] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 23:21:55,135 [5248] DEBUG SQLInsert.TableForm SelectedTable: Person
+2016-02-07 23:21:57,690 [5248] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 23:21:57,690 [5248] DEBUG SQLInsert.TableForm SelectedTable: Address
+2016-02-07 23:21:59,837 [5248] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 23:21:59,837 [5248] DEBUG SQLInsert.TableForm SelectedTable: Branch
+2016-02-07 23:22:01,293 [5248] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 23:22:01,293 [5248] DEBUG SQLInsert.TableForm SelectedTable: Company
+2016-02-07 23:22:02,304 [5248] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 23:22:02,304 [5248] DEBUG SQLInsert.TableForm SelectedTable: Person
+2016-02-07 23:22:02,995 [5248] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 23:22:02,995 [5248] DEBUG SQLInsert.TableForm SelectedTable: Company
+2016-02-07 23:22:04,069 [5248] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 23:22:04,069 [5248] DEBUG SQLInsert.TableForm SelectedTable: Company
+2016-02-07 23:22:04,735 [5248] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 23:22:04,735 [5248] DEBUG SQLInsert.TableForm SelectedTable: Branch
+2016-02-07 23:22:05,932 [5248] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 23:22:05,932 [5248] DEBUG SQLInsert.TableForm SelectedTable: Address
+2016-02-07 23:22:06,869 [5248] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 23:22:06,870 [5248] DEBUG SQLInsert.TableForm SelectedTable: Branch
+2016-02-07 23:22:07,585 [5248] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 23:22:07,585 [5248] DEBUG SQLInsert.TableForm SelectedTable: Branch
+2016-02-07 23:22:08,288 [5248] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 23:22:08,289 [5248] DEBUG SQLInsert.TableForm SelectedTable: Company
+2016-02-07 23:22:08,991 [5248] DEBUG SQLInsert.TableForm dtgTables_MouseUp
+2016-02-07 23:22:08,991 [5248] DEBUG SQLInsert.TableForm SelectedTable: Person
+2016-02-07 23:22:13,682 [7124] DEBUG SQLInsert.DocForm Scripting table: Address
+2016-02-07 23:22:13,790 [7124] DEBUG SQLInsert.DocForm SELECT [ID] ,[Street] ,[City] ,[Zip] ,[Country] ,[Person_ID]  FROM [dbo].[Address]  WHERE 1=1  AND ( [Person_ID] IN ( 3, 4 ) ) 
+2016-02-07 23:22:13,806 [7124] DEBUG SQLInsert.DocForm Scripting table: Branch
+2016-02-07 23:22:13,843 [7124] DEBUG SQLInsert.DocForm SELECT [ID] ,[BranchName] ,[Company_ID]  FROM [dbo].[Branch]  WHERE 1=1  AND ( [Company_ID] IN ( 2 ) ) 
+2016-02-07 23:22:13,851 [7124] DEBUG SQLInsert.DocForm Scripting table: Company
+2016-02-07 23:22:13,880 [7124] DEBUG SQLInsert.DocForm SELECT [ID] ,[CompanyName]  FROM [dbo].[Company]  WHERE 1=1  AND ( [ID] = 2 ) 
+2016-02-07 23:22:13,886 [7124] DEBUG SQLInsert.DocForm Scripting table: Person
+2016-02-07 23:22:13,918 [7124] DEBUG SQLInsert.DocForm SELECT [ID] ,[FirstName] ,[LastName] ,[Company_ID]  FROM [dbo].[Person]  WHERE 1=1  AND ( [Company_ID] IN ( 2 ) ) 

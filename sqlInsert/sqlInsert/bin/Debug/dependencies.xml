@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<table name="Company" PrimaryKey="ID" >
+			<table name="Person" PrimaryKey="ID" ForeignKey="Company_ID" >
+					<table name="Address" PrimaryKey="ID" ForeignKey="Person_ID" ></table>
+			</table>
+			<table name="Branch" PrimaryKey="ID" ForeignKey="Company_ID" ></table>
+</table>
