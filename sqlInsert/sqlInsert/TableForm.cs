@@ -633,11 +633,10 @@ namespace SQLInsert
 			this.SetUIFromSettings(Global.RefreshMode.DataBase);
 		}
 
-		private bool  LoadXMLNodeAndChildren(XmlNode tableNode, bool isRoot, List<string> foreignKeys)
+		private bool  LoadXMLNodeAndChildren(XmlNode tableNode, bool isRoot, List<object> foreignKeys, Column fkColumn)
 		{
 			try
 			{
-			
 				string output = "";
 				foreach(XmlAttribute attr in tableNode.Attributes)
 				{;
@@ -651,21 +650,52 @@ namespace SQLInsert
 
 				Global.DBSetting.GetTblSetting(tableName, true).Script = true;
 
-
 				string fk = "";
 				if(!isRoot)
 				{
 					fk = tableNode.Attributes["ForeignKey"].Value;
 				}
 
-
-
-				List<string> fkForChild = new List<string>();
+				List<object> fkForChild = new List<object>();
 				string filter = "";
 				if (foreignKeys.Count > 0 &&  !string.IsNullOrEmpty(fk))
 				{
-					string filterNoWhereStatement = string.Format("[{0}] IN ( {1} )", fk, string.Join(", ", foreignKeys.ToArray()));
+					string filterItems = "";
 
+					bool isFirstItem = true;
+					foreach(object foreignKeyItem in foreignKeys)
+					{
+						string separator = ", ";
+						if (isFirstItem) separator = "";
+
+						if (
+							fkColumn.DataType.Name.ToLower() == "bigint" ||
+							fkColumn.DataType.Name.ToLower() == "bit" ||
+							fkColumn.DataType.Name.ToLower() == "decimal" ||
+							fkColumn.DataType.Name.ToLower() == "float" ||
+							fkColumn.DataType.Name.ToLower() == "int" ||
+							fkColumn.DataType.Name.ToLower() == "money" ||
+							fkColumn.DataType.Name.ToLower() == "real" ||
+							fkColumn.DataType.Name.ToLower() == "smallint" ||
+							fkColumn.DataType.Name.ToLower() == "smallmoney" ||
+							fkColumn.DataType.Name.ToLower() == "tinyint" ||
+							fkColumn.DataType.Name.ToLower() == "image" ||
+							fkColumn.DataType.Name.ToLower() == "bytearray" ||
+						   fkColumn.DataType.Name.ToLower() == "geography"
+
+							)
+						{
+							filterItems += separator + foreignKeyItem.ToString();
+						}
+						else
+						{
+							filterItems += separator + "'" + (string)foreignKeyItem + "'";
+						}
+
+						isFirstItem = false;
+					}
+					string filterNoWhereStatement = string.Format("[{0}] IN ({1})" ,fk, filterItems);
+					
 					filter = " WHERE " + filterNoWhereStatement;
 
 					Global.DBSetting.GetTblSetting(tableName, true).Filter = filterNoWhereStatement;
@@ -677,14 +707,15 @@ namespace SQLInsert
 					filter = " WHERE " + Global.DBSetting.GetTblSetting(tableName, true).Filter;
                 }
 
+				Column fkCol = null;
 				if (tableNode.HasChildNodes)
 				{
 					string sql = string.Format("Select [{0}] FROM [{1}] " + filter, pk, tableName);
 					DataTable dt = Global.Serv1.Databases[Global.SelectedDB].ExecuteWithResults(sql).Tables[0];
-					foreach(DataRow dr in dt.Rows)
+					fkCol = Global.Serv1.Databases[Global.SelectedDB].Tables[tableName].Columns[pk];
+					foreach (DataRow dr in dt.Rows)
 					{
-						int val = (int)dr[pk];
-						fkForChild.Add(val.ToString());
+						fkForChild.Add(dr[pk]);
                     }
 				}
 
@@ -693,7 +724,7 @@ namespace SQLInsert
 				{
 					foreach(XmlNode dependentTable in tableNode.ChildNodes)
 					{
-						if( !LoadXMLNodeAndChildren(dependentTable,false, fkForChild)) return false;
+						if( !LoadXMLNodeAndChildren(dependentTable,false, fkForChild, fkCol)) return false;
                     }
 				}
 
@@ -726,7 +757,7 @@ namespace SQLInsert
 					return;
 				}
 
-				bool result = LoadXMLNodeAndChildren(doc.DocumentElement,true ,new List<string>());
+				bool result = LoadXMLNodeAndChildren(doc.DocumentElement,true ,new List<object>(),null);
 				if(result )this.SetUIFromSettings(Global.RefreshMode.DataBase);
 
 			}
